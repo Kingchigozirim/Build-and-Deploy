@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- 
+  This is the main HTML file for the Mini Music Player Web App.
+  - Defines the document structure.
+  - Includes links to CSS and JS files.
+  - Contains the player UI elements: file input, buttons, audio element, and progress bar.
+  - The audio element is hidden but controlled via JS.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Sets character encoding to UTF-8 for broad compatibility. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsive design on mobile devices. -->
+    <title>Mini Music Player</title> <!-- Page title displayed in browser tab. -->
+    <link rel="stylesheet" href="style.css"> <!-- Links to external CSS for styling. -->
+</head>
+<body>
+    <div class="player-container"> <!-- Main container for centering and styling the player UI. -->
+        <h1>Mini Music Player</h1> <!-- Heading for the app title. -->
+        
+        <input type="file" id="fileInput" accept="audio/mp3"> <!-- File input for loading local MP3 files. Accept attribute limits to MP3. -->
+        <button id="loadButton">Load File</button> <!-- Button to trigger file selection (JS handles the click). -->
+        
+        <audio id="audioPlayer"></audio> <!-- Hidden audio element for playback. Source set dynamically via JS. -->
+        
+        <div class="controls"> <!-- Container for playback control buttons. -->
+            <button id="playButton">▶️ Play</button> <!-- Play/Restart button with emoji icon. Text changes dynamically. -->
+            <button id="pauseButton">⏸️ Pause</button> <!-- Pause/Resume button with emoji icon. Text changes dynamically. -->
+            <button id="stopButton">⏹️ Stop</button> <!-- Stop button with emoji icon. -->
+        </div>
+        
+        <progress id="progressBar" value="0" max="100"></progress> <!-- Progress bar to show playback progress. Updated via JS. -->
+    </div>
+    
+    <script src="script.js"></script> <!-- Links to external JS for functionality. Loaded at end for better performance. -->
+</body>
+</html>

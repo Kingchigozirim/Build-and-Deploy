@@ -1,0 +1,80 @@
+/* 
+  This CSS file styles the Mini Music Player Web App.
+  - Uses flexbox for layout and centering.
+  - Applies a clean, modern theme with colors, shadows, and transitions.
+  - Ensures responsiveness with media queries.
+*/
+
+/* Global styles for body: Centers content, sets background, and font. */
+body {
+    font-family: Arial, sans-serif; /* Sans-serif font for readability. */
+    display: flex; /* Flexbox for vertical centering. */
+    justify-content: center; /* Horizontal center. */
+    align-items: center; /* Vertical center. */
+    height: 100vh; /* Full viewport height. */
+    margin: 0; /* Removes default margins. */
+    background-color: #f0f0f0; /* Light gray background. */
+}
+
+/* Player container: Card-like box with shadow and padding. */
+.player-container {
+    background-color: white; /* White background for contrast. */
+    padding: 20px; /* Internal spacing. */
+    border-radius: 10px; /* Rounded corners. */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth. */
+    text-align: center; /* Centers text and elements. */
+    width: 300px; /* Fixed width for consistency. */
+}
+
+/* Heading style: Bold and colored. */
+h1 {
+    font-size: 24px; /* Larger font for title. */
+    margin-bottom: 20px; /* Space below. */
+    color: #333; /* Dark gray text. */
+}
+
+/* File input: Hidden by default; styled if needed, but we use a button to trigger it. */
+#fileInput {
+    display: none; /* Hides the default file input for custom button. */
+}
+
+/* Buttons: Common styles for all buttons. */
+button {
+    padding: 10px 20px; /* Padding for size. */
+    margin: 10px; /* Space around. */
+    border: none; /* No border. */
+    border-radius: 5px; /* Rounded. */
+    background-color: #007bff; /* Blue background. */
+    color: white; /* White text. */
+    cursor: pointer; /* Pointer on hover. */
+    font-size: 16px; /* Readable font size. */
+    transition: background-color 0.3s; /* Smooth color change on hover. */
+}
+
+/* Button hover effect: Darker blue. */
+button:hover {
+    background-color: #0056b3; /* Darker shade. */
+}
+
+/* Controls container: Flexbox for horizontal button layout. */
+.controls {
+    display: flex; /* Flex for row layout. */
+    justify-content: space-around; /* Even spacing. */
+    margin-top: 20px; /* Space above. */
+}
+
+/* Progress bar: Full width, styled with color. */
+#progressBar {
+    width: 100%; /* Full container width. */
+    height: 10px; /* Thin bar. */
+    margin-top: 20px; /* Space above. */
+    background-color: #e0e0e0; /* Light gray background. */
+    accent-color: #007bff; /* Blue progress fill (for modern browsers). */
+}
+
+/* Media query for responsiveness: Adjust width on small screens. */
+@media (max-width: 400px) {
+    .player-container {
+        width: 90%; /* Percentage width for mobile. */
+    }
+}
